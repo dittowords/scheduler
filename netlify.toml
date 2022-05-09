@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build"
+  functions = ".netlify/functions/"
+[functions."scheduler"]
+  schedule = "0 16 * * MON"

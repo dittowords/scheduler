@@ -1,0 +1,23 @@
+{
+  "name": "netlify-functions-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nadirbad/netlify-functions-example.git",
+  "author": "Nadir Badnjevic <nadirbad@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "netlify-lambda": "^1.4.3"
+  },
+  "scripts": {
+    "dev": "netlify-lambda serve functions",
+    "build": "netlify-lambda build functions",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@netlify/functions": "^1.0.0",
+    "@slack/web-api": "^6.7.1",
+    "braintree": "^2.15.0",
+    "dotenv": "^7.0.0"
+  }
+}
