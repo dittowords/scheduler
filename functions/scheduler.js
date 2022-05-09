@@ -24,7 +24,7 @@ const channels = {
 
 const events = [
   {
-    name: "🐛 monitor the Sentry channels 🧑‍🌾",
+    name: "🐛 monitor Sentry & merge Dependabot PRs 🤖",
     users: [users.ash, users.reed, users.xav, users.jordin],
     channels: [channels["sentry-app-errors"], channels["sentry-plugin-errors"]],
     // date of start of week, a Monday
