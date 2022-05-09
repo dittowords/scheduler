@@ -111,8 +111,8 @@ async function handler(_event, _context) {
   const now = new Date();
 
   await Promise.all(
-    events.map(({ name, users, channels }) =>
-      schedule(name, users, [dateOfLastSocial, now], channels)
+    events.map(({ name, anchor, users, channels }) =>
+      schedule(name, users, [anchor, now], channels)
     )
   );
 
