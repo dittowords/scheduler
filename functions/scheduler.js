@@ -5,24 +5,14 @@ const { WebClient } = require("@slack/web-api");
  * BEGIN CONFIGURATION
  */
 
-// const users = {
-//   jess: "UNFJFAT43",
-//   jo: "UNUU6LXN3",
-//   xav: "U01GVGXCB5G",
-//   jordin: "U024QHVC4JF",
-//   ash: "U02MA0RKF0V",
-//   claire: "U024QHVC4JF",
-//   reed: "U03DU1QFW9J",
-// };
-
 const users = {
-  jess: "jess",
-  jo: "jo",
-  xav: "xav",
-  jordin: "jordin",
-  ash: "ash",
-  claire: "claire",
-  reed: "reed",
+  jess: "UNFJFAT43",
+  jo: "UNUU6LXN3",
+  xav: "U01GVGXCB5G",
+  jordin: "U024QHVC4JF",
+  ash: "U02MA0RKF0V",
+  claire: "U024QHVC4JF",
+  reed: "U03DU1QFW9J",
 };
 
 const channels = {
@@ -36,8 +26,7 @@ const events = [
   {
     name: "🐛 monitor the Sentry channels 🧑‍🌾",
     users: [users.ash, users.reed, users.xav, users.jordin],
-    // channels: [channels["sentry-app-errors"], channels["sentry-plugin-errors"]],
-    channels: [channels["jordin-testing"]],
+    channels: [channels["sentry-app-errors"], channels["sentry-plugin-errors"]],
     // date of start of week, a Monday
     anchor: new Date("2022-05-09T00:00:00.000Z"),
   },
@@ -52,8 +41,7 @@ const events = [
       users.jordin,
       users.jo,
     ],
-    // channels: [channels.general],
-    channels: [channels["jordin-testing"]],
+    channels: [channels.general],
     // date of last social, a Thursday
     anchor: new Date("2022-05-05T00:00:00.000Z"),
   },
