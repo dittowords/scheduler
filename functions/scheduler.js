@@ -11,7 +11,7 @@ const users = {
   xav: "U01GVGXCB5G",
   jordin: "U024QHVC4JF",
   ash: "U02MA0RKF0V",
-  claire: "U024QHVC4JF",
+  claire: "U0331GQP2KU",
   reed: "U03DU1QFW9J",
 };
 
