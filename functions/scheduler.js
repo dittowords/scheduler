@@ -13,6 +13,7 @@ const users = {
   ash: "U02MA0RKF0V",
   claire: "U024QHVC4JF",
   reed: "U03DU1QFW9J",
+  jrod: "U03JW6Q26RY",
 };
 
 const channels = {
@@ -25,7 +26,7 @@ const channels = {
 const events = [
   {
     name: "🐛 monitor Sentry & merge Dependabot PRs 🤖",
-    users: [users.ash, users.reed, users.xav, users.jordin],
+    users: [users.ash, users.reed, users.xav, users.jordin, users.jrod],
     channels: [channels["sentry-app-errors"], channels["sentry-plugin-errors"]],
     // date of start of week, a Monday
     anchor: new Date("2022-05-09T00:00:00.000Z"),
@@ -40,6 +41,7 @@ const events = [
       users.jess,
       users.jordin,
       users.jo,
+      users.jrod,
     ],
     channels: [channels.general],
     // date of last social, a Thursday
