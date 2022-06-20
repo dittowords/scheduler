@@ -5,7 +5,7 @@ const { WebClient } = require("@slack/web-api");
  * BEGIN CONFIGURATION
  */
 
-const users = {
+const userMap = {
   jess: "UNFJFAT43",
   jo: "UNUU6LXN3",
   xav: "U01GVGXCB5G",
@@ -25,26 +25,30 @@ const channels = {
 
 const events = [
   {
-    name: "🐛 monitor Sentry & merge Dependabot PRs 🤖",
-    users: [users.ash, users.reed, users.xav, users.jordin, users.jrod],
+    name: "🐛 monitor Sentry channels 🧑‍🌾",
+    users: [
+      userMap.ash,
+      userMap.reed,
+      userMap.xav,
+      userMap.jordin,
+      userMap.jrod,
+    ],
     channels: [channels["sentry-app-errors"], channels["sentry-plugin-errors"]],
-    // date of start of week, a Monday
-    anchor: new Date("2022-05-09T00:00:00.000Z"),
+    anchor: new Date("2022-05-02T00:00:00.000Z"),
   },
   {
     name: "✨ plan the weekly social ✨",
     users: [
-      users.xav,
-      users.ash,
-      users.claire,
-      users.reed,
-      users.jordin,
-      users.jess,
-      users.jo,
-      users.jrod,
+      userMap.xav,
+      userMap.ash,
+      userMap.claire,
+      userMap.reed,
+      userMap.jordin,
+      userMap.jess,
+      userMap.jo,
+      userMap.jrod,
     ],
     channels: [channels.general],
-    // date of last social, a Thursday
     anchor: new Date("2022-05-05T00:00:00.000Z"),
   },
 ];
@@ -91,6 +95,14 @@ async function schedule(event, users, dates, channels) {
         channel: channelId,
         text: `This week, it is <@${userId}>'s turn to.. *${event}*`,
       };
+
+      if (process.env.DEBUG === "true") {
+        console.log(
+          Object.keys(userMap).find((userName) => userMap[userName] === userId),
+          event
+        );
+        return;
+      }
 
       console.log(await slackClient.chat.postMessage(data));
     })
