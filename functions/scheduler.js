@@ -27,11 +27,11 @@ const events = [
   {
     name: "🐛 monitor Sentry channels 🧑‍🌾",
     users: [
-      userMap.ash,
+      userMap.jrod,
       userMap.reed,
       userMap.xav,
       userMap.jordin,
-      userMap.jrod,
+      userMap.ash,
     ],
     channels: [channels["sentry-app-errors"], channels["sentry-plugin-errors"]],
     anchor: new Date("2022-05-02T00:00:00.000Z"),
