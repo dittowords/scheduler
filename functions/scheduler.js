@@ -39,17 +39,25 @@ const events = [
   {
     name: "✨ plan the weekly social ✨",
     users: [
-      userMap.xav,
-      userMap.ash,
-      userMap.claire,
-      userMap.reed,
-      userMap.jordin,
-      userMap.jess,
-      userMap.jo,
+      null,
       userMap.jrod,
+      null,
+      userMap.ash,
+      null,
+      userMap.claire,
+      null,
+      userMap.reed,
+      null,
+      userMap.jordin,
+      null,
+      userMap.jess,
+      null,
+      userMap.jo,
+      null,
+      userMap.xav
     ],
     channels: [channels.general],
-    anchor: new Date("2022-05-05T00:00:00.000Z"),
+    anchor: new Date("2022-03-17T00:00:00.000Z"),
   },
 ];
 /**
@@ -72,7 +80,7 @@ function getUser(users, anchorDate, now) {
   const weeksSinceAnchorDate = weeksBetween(anchorDate, now);
 
   const userId = users[weeksSinceAnchorDate % users.length];
-  if (!userId) {
+  if (userId === undefined) {
     throw new Error(
       "Couldn't retrieve user at index " +
         index +
@@ -87,6 +95,9 @@ module.exports.getUser = getUser;
 
 async function schedule(event, users, dates, channels) {
   const userId = getUser(users, ...dates);
+  if (userId === null) {
+    return;
+  }
 
   await Promise.all(
     channels.map(async (channelId) => {
