@@ -8,7 +8,6 @@ const { WebClient } = require("@slack/web-api");
 const userMap = {
   jess: "UNFJFAT43",
   jo: "UNUU6LXN3",
-  xav: "U01GVGXCB5G",
   jordin: "U024QHVC4JF",
   ash: "U02MA0RKF0V",
   claire: "U0331GQP2KU",
@@ -29,7 +28,6 @@ const events = [
     users: [
       userMap.reed,
       userMap.jrod,
-      userMap.xav,
       userMap.ash,
       userMap.jordin,
     ],
@@ -39,8 +37,6 @@ const events = [
   {
     name: "✨ plan the weekly social ✨",
     users: [
-      null,
-      userMap.xav,
       null,
       userMap.jrod,
       null,
