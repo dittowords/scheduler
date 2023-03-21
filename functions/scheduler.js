@@ -58,13 +58,13 @@ const events = [
     {
     name: "🔧 Spend 1-2 hours resolving nulls in the Figma plugin 💩",
     users: [
+      userMap.reed,
       userMap.jrod,
       userMap.ash,
-      userMap.jordin,
-      userMap.reed
+      userMap.jordin
     ],
     channels: [channels.engineering],
-    anchor: new Date("2022-03-17T00:00:00.000Z"),
+    anchor: new Date("2022-05-09T00:00:00.000Z"),
   },
 ];
 /**
