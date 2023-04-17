@@ -13,6 +13,7 @@ const userMap = {
   claire: "U0331GQP2KU",
   reed: "U03DU1QFW9J",
   jrod: "U03JW6Q26RY",
+  george: "U053K43297E"
 };
 
 const channels = {
@@ -40,6 +41,8 @@ const events = [
       null,
       userMap.jrod,
       null,
+      userMap.george,
+      null,
       userMap.ash,
       null,
       userMap.claire,
@@ -54,18 +57,7 @@ const events = [
     ],
     channels: [channels.general],
     anchor: new Date("2022-03-17T00:00:00.000Z"),
-  },
-    {
-    name: "🔧 Spend 1-2 hours resolving nulls in the Figma plugin 💩",
-    users: [
-      userMap.reed,
-      userMap.jrod,
-      userMap.ash,
-      userMap.jordin
-    ],
-    channels: [channels.engineering],
-    anchor: new Date("2022-05-09T00:00:00.000Z"),
-  },
+  }
 ];
 /**
  * END CONFIGURATION
