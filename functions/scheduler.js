@@ -27,9 +27,9 @@ const events = [
   {
     name: "🐛 monitor Sentry channels 🧑‍🌾",
     users: [
-      userMap.reed,
-      userMap.jrod,
       userMap.ash,
+      userMap.jrod,
+      userMap.reed,
       userMap.jordin,
     ],
     channels: [channels["sentry-app-errors"], channels["sentry-plugin-errors"]],
