@@ -38,7 +38,6 @@ const events = [
   {
     name: "✨ plan the weekly social ✨",
     users: [
-      null,
       userMap.ash,
       null,
       userMap.george,
@@ -53,7 +52,8 @@ const events = [
       null,
       userMap.jess,
       null,
-      userMap.jo
+      userMap.jo,
+      null,
     ],
     channels: [channels.general],
     anchor: new Date("2022-05-05T00:00:00.000Z"),
