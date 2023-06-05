@@ -26,8 +26,6 @@ test("getUser gets the correct user with nulls", () => {
     null,
     "george",
     null,
-    "claire",
-    null,
     "jrod",
     null,
     "jordin",
@@ -58,18 +56,16 @@ test("getUser gets the correct user with nulls", () => {
   test("2022-06-12T00:00:00.000Z", null);
   test("2022-06-19T00:00:00.000Z", "george");
   test("2022-06-26T00:00:00.000Z", null);
-  test("2022-07-03T00:00:00.000Z", "claire");
+  test("2022-07-03T00:00:00.000Z", "jrod");
   test("2022-07-10T00:00:00.000Z", null);
-  test("2022-07-17T00:00:00.000Z", "jrod");
+  test("2022-07-17T00:00:00.000Z", "jordin");
   test("2022-07-24T00:00:00.000Z", null);
-  test("2022-07-31T00:00:00.000Z", "jordin");
+  test("2022-07-31T00:00:00.000Z", "reed");
   test("2022-08-07T00:00:00.000Z", null);
-  test("2022-08-14T00:00:00.000Z", "reed");
+  test("2022-08-14T00:00:00.000Z", "jess");
   test("2022-08-21T00:00:00.000Z", null);
-  test("2022-08-28T00:00:00.000Z", "jess");
+  test("2022-08-28T00:00:00.000Z", "jo");
   test("2022-09-04T00:00:00.000Z", null);
-  test("2022-09-11T00:00:00.000Z", "jo");
+  test("2022-09-11T00:00:00.000Z", "ash");
   test("2022-09-18T00:00:00.000Z", null);
-  test("2022-09-25T00:00:00.000Z", "ash");
-  test("2022-10-02T00:00:00.000Z", null);
 });
