@@ -1,7 +1,5 @@
 const { getUser } = require("../functions/scheduler");
 
-const WEEK = 1000 * 60 * 60 * 24 * 7;
-
 test("getUser gets the correct user", () => {
   const users = ["1", "2", "3", "4", "5"];
   const anchorDate = new Date("2022-05-05T00:00:00.000Z");
@@ -20,4 +18,48 @@ test("getUser gets the correct user", () => {
   test("2022-06-27T00:00:00.000Z", "3");
   test("2022-07-04T00:00:00.000Z", "4");
   test("2022-07-11T00:00:00.000Z", "5");
+});
+
+test("getUser gets the correct user with nulls", () => {
+  const users = [
+    null,
+    "ash",
+    null,
+    "george",
+    null,
+    "claire",
+    null,
+    "jrod",
+    null,
+    "jordin",
+    null,
+    "reed",
+    null,
+    "jess",
+    null,
+    "jo",
+  ];
+  const anchorDate = new Date("2022-05-05T00:00:00.000Z");
+  const test = (date, expected) => {
+    expect(getUser(users, anchorDate, new Date(date))).toBe(expected);
+  };
+
+  test("2022-05-09T00:00:00.000Z", null);
+  test("2022-05-16T00:00:00.000Z", "ash");
+  test("2022-05-23T00:00:00.000Z", null);
+  test("2022-05-30T00:00:00.000Z", "george");
+  test("2022-06-06T00:00:00.000Z", null);
+  test("2022-06-13T00:00:00.000Z", "claire");
+  test("2022-06-20T00:00:00.000Z", null);
+  test("2022-06-27T00:00:00.000Z", "jrod");
+  test("2022-07-04T00:00:00.000Z", null);
+  test("2022-07-11T00:00:00.000Z", "jordin");
+  test("2022-07-18T00:00:00.000Z", null);
+  test("2022-07-25T00:00:00.000Z", "reed");
+  test("2022-08-02T00:00:00.000Z", null);
+  test("2022-08-09T00:00:00.000Z", "jess");
+  test("2022-08-16T00:00:00.000Z", null);
+  test("2022-08-23T00:00:00.000Z", "jo");
+  test("2022-08-30T00:00:00.000Z", null);
+  test("2022-09-06T00:00:00.000Z", "ash");
 });
