@@ -56,7 +56,7 @@ const events = [
       null,
     ],
     channels: [channels.general],
-    anchor: new Date("2022-05-05T00:00:00.000Z"),
+    anchor: new Date("2022-06-05T00:00:00.000Z"),
   }
 ];
 /**
