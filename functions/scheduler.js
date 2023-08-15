@@ -13,7 +13,8 @@ const userMap = {
   claire: "U0331GQP2KU",
   reed: "U03DU1QFW9J",
   jrod: "U03JW6Q26RY",
-  george: "U053K43297E"
+  george: "U053K43297E",
+  kaden: "U05MQ66JA2E"
 };
 
 const channels = {
@@ -31,6 +32,7 @@ const events = [
       userMap.jrod,
       userMap.reed,
       userMap.jordin,
+      userMap.kaden
     ],
     channels: [channels["sentry-app-errors"], channels["sentry-plugin-errors"]],
     anchor: new Date("2022-05-02T00:00:00.000Z"),
@@ -54,6 +56,8 @@ const events = [
       null,
       userMap.jo,
       null,
+      userMap.kaden,
+      null
     ],
     channels: [channels.general],
     anchor: new Date("2022-06-05T00:00:00.000Z"),
